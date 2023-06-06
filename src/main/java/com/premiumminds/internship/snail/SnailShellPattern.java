@@ -49,7 +49,8 @@ class SnailShellPattern implements ISnailShellPattern {
             newY += currentDirection[1];
           }
 
-          //For the next iteration we change the beginning of the next line
+          //  For the next iteration we change the beginning coordinates
+          // to the ones of the next line.
           if (currentDirection[0] > 0) {
             x += length - 1;
             y += 1;
@@ -69,6 +70,7 @@ class SnailShellPattern implements ISnailShellPattern {
 
       } else {
         result = new int[0];
+        System.out.println("Empty or not an square matrix");
       }
       System.out.println("(getSnailShell) This iteration took : "+(System.currentTimeMillis()-init)+" milliseconds");
 
